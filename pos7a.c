@@ -36,3 +36,13 @@ int main()
 	res = mkfifo("fifo1",0777); //creates a named pipe with the name fifo1
 	printf("named pipe created\n");
 }
+
+//Run program
+gcc -o pos7a1 pos7a1.c
+gcc -o pos7a2 pos7a2.c
+gcc -o pos7a3 pos7a3.c
+
+terminal 1     terminal 2
+./pos7a1	./pos7a3 > output.txt
+./pos7a2	cat output.txt
+
